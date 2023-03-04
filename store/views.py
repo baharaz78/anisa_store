@@ -4,7 +4,8 @@ from . import models
 
 
 class ListProductView(View):
-    def get(self, request):
+    @staticmethod
+    def get(request):
         products = models.Product.objects.filter(is_available=True)
         context = {
             'objects': products

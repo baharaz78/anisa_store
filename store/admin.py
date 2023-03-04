@@ -3,6 +3,7 @@ from . import models
 
 
 class ProductAdmin(admin.ModelAdmin):
+    list_display = ['name', 'price', 'discount', 'count', 'is_available']
     ...
 
 
